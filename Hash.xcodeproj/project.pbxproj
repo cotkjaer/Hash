@@ -10,6 +10,9 @@
 		8FD874971C76196E00181FA6 /* Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FD874961C76196E00181FA6 /* Hash.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FD8749E1C76196E00181FA6 /* Hash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD874931C76196E00181FA6 /* Hash.framework */; };
 		8FD874A31C76196E00181FA6 /* HashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD874A21C76196E00181FA6 /* HashTests.swift */; };
+		8FD874AE1C76197C00181FA6 /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD874AD1C76197C00181FA6 /* Hash.swift */; };
+		8FD874B01C7619C900181FA6 /* Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD874AF1C7619C900181FA6 /* Hashable.swift */; };
+		8FD874B21C761A0500181FA6 /* HashableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD874B11C761A0500181FA6 /* HashableTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		8FD8749D1C76196E00181FA6 /* HashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD874A21C76196E00181FA6 /* HashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTests.swift; sourceTree = "<group>"; };
 		8FD874A41C76196E00181FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FD874AD1C76197C00181FA6 /* Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
+		8FD874AF1C7619C900181FA6 /* Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hashable.swift; sourceTree = "<group>"; };
+		8FD874B11C761A0500181FA6 /* HashableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashableTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,8 @@
 		8FD874951C76196E00181FA6 /* Hash */ = {
 			isa = PBXGroup;
 			children = (
+				8FD874AF1C7619C900181FA6 /* Hashable.swift */,
+				8FD874AD1C76197C00181FA6 /* Hash.swift */,
 				8FD874961C76196E00181FA6 /* Hash.h */,
 				8FD874981C76196E00181FA6 /* Info.plist */,
 			);
@@ -81,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				8FD874A21C76196E00181FA6 /* HashTests.swift */,
+				8FD874B11C761A0500181FA6 /* HashableTests.swift */,
 				8FD874A41C76196E00181FA6 /* Info.plist */,
 			);
 			path = HashTests;
@@ -194,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FD874AE1C76197C00181FA6 /* Hash.swift in Sources */,
+				8FD874B01C7619C900181FA6 /* Hashable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FD874A31C76196E00181FA6 /* HashTests.swift in Sources */,
+				8FD874B21C761A0500181FA6 /* HashableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +320,7 @@
 		8FD874A81C76196E00181FA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +331,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.Hash";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		8FD874A91C76196E00181FA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
