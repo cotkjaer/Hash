@@ -50,4 +50,17 @@ class HashableTests: XCTestCase {
         XCTAssertEqual(false, i?.isIn(array))
         
     }
+    
+    func test_hashed()
+    {
+        let array: Array<Int> = [0,1,2,3,4]
+        
+        XCTAssertEqual(array.hashed(), 1610)
+        XCTAssertEqual(array.hashed(), array.hashed())
+        
+        let set: Set<Int> = Set(array)
+        
+        XCTAssertNotEqual(set.hashed(), array.hashed())
+        XCTAssertEqual(set.hashed(), set.hashed())
+    }
 }

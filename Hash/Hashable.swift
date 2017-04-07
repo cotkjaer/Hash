@@ -10,8 +10,19 @@
 
 extension Hashable
 {
-    func isIn<S : SequenceType where Self == S.Generator.Element>(sequence: S?) -> Bool
+    func isIn<S: Sequence>(_ sequence: S?) -> Bool where Self == S.Iterator.Element
     {
         return sequence?.contains(self) == true
     }
 }
+
+// MARK: - chaining
+
+extension Hashable
+{
+    func chainedHashValue<H:Hashable>(seed: Int = 11, _ other: H) -> Int
+    {
+        return seed &* hashValue &+ other.hashValue
+    }
+}
+
