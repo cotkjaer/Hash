@@ -26,24 +26,24 @@ public func hash<H:Hashable>(seed: Int = 11, _ hashables: H...) -> Int
     return hash(seed: seed, hashValuesArray:hashables.map{$0.hashValue})
 }
 
-public func hash<H1:Hashable, H2:Hashable>(seed: Int = 11, _ hashable1: H1, _ hashable2: H2) -> Int
+public func hash<H1:Hashable, H2:Hashable>(seed: Int = 11, _ hashable1: H1?, _ hashable2: H2?) -> Int
 {
-    return hash(seed: seed, hashValuesArray:[hashable1.hashValue, hashable2.hashValue])
+    return hash(seed: seed, hashValuesArray:[hashable1?.hashValue ?? 0, hashable2?.hashValue ?? 0])
 }
 
-public func hash<H1:Hashable, H2:Hashable, H3:Hashable>(seed: Int = 11, _ hashable1: H1, _ hashable2: H2, _ hashable3: H3) -> Int
+public func hash<H1:Hashable, H2:Hashable, H3:Hashable>(seed: Int = 11, _ hashable1: H1?, _ hashable2: H2?, _ hashable3: H3?) -> Int
 {
-    return hash(seed: seed, hashValuesArray:[hashable1.hashValue, hashable2.hashValue, hashable3.hashValue])
+    return hash(seed: seed, hashValuesArray:[hashable1?.hashValue ?? 0, hashable2?.hashValue ?? 0, hashable3?.hashValue ?? 0])
 }
 
-public func hash<H1:Hashable, H2:Hashable, H3:Hashable, H4:Hashable>(seed: Int = 11, _ hashable1: H1, _ hashable2: H2, _ hashable3: H3, _ hashable4: H4) -> Int
+public func hash<H1:Hashable, H2:Hashable, H3:Hashable, H4:Hashable>(seed: Int = 11, _ hashable1: H1?, _ hashable2: H2?, _ hashable3: H3?, _ hashable4: H4?) -> Int
 {
-    return hash(seed: seed, hashValuesArray:[hashable1.hashValue, hashable2.hashValue, hashable3.hashValue, hashable4.hashValue])
+    return hash(seed: seed, hashValuesArray:[hashable1?.hashValue ?? 0, hashable2?.hashValue ?? 0, hashable3?.hashValue ?? 0, hashable4?.hashValue ?? 0])
 }
 
-public func hash<H1:Hashable, H2:Hashable, H3:Hashable, H4:Hashable, H5:Hashable>(seed: Int = 11, _ hashable1: H1, _ hashable2: H2, _ hashable3: H3, _ hashable4: H4, _ hashable5: H5) -> Int
+public func hash<H1:Hashable, H2:Hashable, H3:Hashable, H4:Hashable, H5:Hashable>(seed: Int = 11, _ hashable1: H1?, _ hashable2: H2?, _ hashable3: H3?, _ hashable4: H4?, _ hashable5: H5?) -> Int
 {
-    return hash(seed: seed, hashValuesArray:[hashable1.hashValue, hashable2.hashValue, hashable3.hashValue, hashable4.hashValue, hashable5.hashValue])
+    return hash(seed: seed, hashValuesArray:[hashable1?.hashValue ?? 0, hashable2?.hashValue ?? 0, hashable3?.hashValue ?? 0, hashable4?.hashValue ?? 0, hashable5?.hashValue ?? 0])
 }
 
 // MARK: - <#comment#>
